@@ -19,6 +19,10 @@ Pod::Spec.new do |s|
     :tag => s.version 
   }
 
+  s.resource_bundles = {
+  'TxkjBaseLibPrivacy' => ['PrivacyInfo.xcprivacy']
+  }
+
   s.subspec 'Then' do |ss|
     ss.source_files = 'Source/Then/**/*'
   end
