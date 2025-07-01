@@ -24,6 +24,6 @@ Pod::Spec.new do |s|
   }
 
   s.subspec 'Then' do |ss|
-    ss.source_files = 'Source/Then/**/*'
+    ss.source_files = 'Source/Then/*.swift'
   end
 end
