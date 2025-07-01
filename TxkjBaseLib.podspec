@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'TxkjBaseLib'
-  s.version          = '0.0.3'
+  s.version          = '0.0.1'
   s.summary          = 'TxkjBaseLib 基础库，封装了常用的功能'
   
   s.description      = <<-DESC
