@@ -17,7 +17,7 @@ func apply<T>(_ value: T, _ block: (T) -> Void) -> T {
 }
 
 // MARK: - 协议：Then，用于链式调用
-protocol Then {}
+public protocol Then {}
 
 extension Then where Self: AnyObject {
     // 引用类型（class）支持修改后返回自身
