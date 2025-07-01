@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'TxkjBaseLib'
-  s.version          = '0.0.2'
+  s.version          = '0.0.3'
   s.summary          = 'TxkjBaseLib 基础库，封装了常用的功能'
   
   s.description      = <<-DESC
@@ -22,8 +22,5 @@ Pod::Spec.new do |s|
   s.resource_bundles = {
   'TxkjBaseLibPrivacy' => ['PrivacyInfo.xcprivacy']
   }
-
-  s.subspec 'Then' do |ss|
-    ss.source_files = 'Source/Then/*.swift'
-  end
+  s.source_files = 'Source/*.swift'
 end
