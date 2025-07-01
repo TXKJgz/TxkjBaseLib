@@ -11,7 +11,7 @@ import UIKit
 
 // MARK: - 全局 apply 函数（适用于任意类型）
 @discardableResult
-func apply<T>(_ value: T, _ block: (T) -> Void) -> T {
+public func apply<T>(_ value: T, _ block: (T) -> Void) -> T {
     block(value)
     return value
 }
@@ -22,25 +22,25 @@ public protocol Then {}
 extension Then where Self: AnyObject {
     // 引用类型（class）支持修改后返回自身
     @discardableResult
-    func then(_ block: (Self) -> Void) -> Self {
+    public func then(_ block: (Self) -> Void) -> Self {
         block(self)
         return self
     }
 
-    func `do`(_ block: (Self) -> Void) {
+    public func `do`(_ block: (Self) -> Void) {
         block(self)
     }
 }
 
 extension Then where Self: Any {
     // 值类型（struct、enum）返回新的值
-    func with(_ block: (inout Self) -> Void) -> Self {
+    public func with(_ block: (inout Self) -> Void) -> Self {
         var copy = self
         block(&copy)
         return copy
     }
 
-    func `do`(_ block: (Self) -> Void) {
+    public func `do`(_ block: (Self) -> Void) {
         block(self)
     }
 }
